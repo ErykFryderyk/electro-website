@@ -79,3 +79,27 @@ myButton.onclick = function(){
     window.scrollTo(0,0);
 
 };
+
+
+$('.multiple-items').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 3
+});
+
+// masonry
+
+const masonry = new Macy({
+    container:  '.masonry-gallery',
+    mobileFirst: true,
+    columns: 1,
+    breakAt: {
+        500: 2,
+        700: 3,
+        1100: 4,
+    },
+    margin: {
+        x: 20,
+        y: 20,
+    }
+});

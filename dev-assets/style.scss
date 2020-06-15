@@ -292,7 +292,7 @@ img{
     display: grid;
     grid-template-columns: 55% 45%;
     // grid-gap: 10%;
-    // grid-template-rows: minmax(300px);
+    // grid-template-rows: min-max(300px);
     
     &__content{
         margin:20px 15px;

@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display:400,500&display=swap&subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900&display=swap&subset=latin-ext" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Elektro</title>
+    
+    <link rel="stylesheet" href="./lightbox2-dev/dist/css/lightbox.min.css"/>
+    <link rel="stylesheet" href="ism/css/my-slider.css"/>
     <link rel="stylesheet" href="prod-assets/style.css">
 </head>
 <body>
     <header>
-        <div class="container">
+        <div class="container" id="top">
             <div class="navbar">
                 <div class="navbar__header">
                     <div class="logo-icon">
@@ -26,19 +29,19 @@
                     <nav>
                         <ul class="navigation"> 
                             <li>
-                                <a class="navigation__item" href="#">Home</a>
+                                <a class="navigation__item" href="#home">Home</a>
                             </li>
                             <li>
-                                <a class="navigation__item" href="#">Firma</a>
+                                <a class="navigation__item" href="#company">Firma</a>
                             </li>
                             <li>
-                                <a class="navigation__item" href="#">Oferta</a>
+                                <a class="navigation__item" href="#offer">Oferta</a>
                             </li>
                             <li>
-                                <a class="navigation__item" href="#">Galeria</a>
+                                <a class="navigation__item" href="#gallery">Galeria</a>
                             </li>
                             <li>
-                                <a class="navigation__item" href="#">Kontakt</a>
+                                <a class="navigation__item" href="#contact">Kontakt</a>
                             </li>
                         </ul>
                     </nav>
@@ -50,33 +53,36 @@
 <div class="divider"></div>
 
 <!-- Slider -->
-    <div class="wrap">
-        <div id="arrow-left" class="arrow"></div>
-        <div id="slider">
-            <div class="slide slide1">
-                <div class="slide-content">
-                    <div class="slide-content__banner">
-                        <h1>Usługi elektryczne na najwyższym poziomie!</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <div class="ism-slider" data-transition_type="fade" id="my-slider">
+        <ol>
+            <li>
+                <img class="slide-background"src="img/image1.jpg"> <!--from pixabay.com-->
+                <div class="ism-caption ism-caption-0" data-delay='200'>
+                    <div class="slogan">
+                        <h1 class="slogan__header">Usługi elektryczne na najwyższym poziomie!</h1>
+                        <p class="slogan__content">Gwarantujemy niezawodność i bezpieczensto każdej wykonanej pracy.
+                        </p>
                     </div>
                 </div>
-            </div>
-            <div class="slide slide2">
-                <div class="slide-content">
-                    <div class="slide-content__banner">
-                        <h1>Znajdziemy rozwiązanie na każdy problem</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </li>
+            <li>
+                <img class="slide-background"src="img/image2.jpg"> <!--from pixabay.com-->
+                <div class="ism-caption ism-caption-0" data-delay='200'>
+                    <div class="slogan">
+                        <h1 class="slogan__header">
+                            Usługi elektryczne na najwyższym poziomie!
+                        </h1>
+                        <p class="slogan__content">Gwarantujemy niezawodność i bezpieczensto każdej wykonanej pracy</p>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div id="arrow-right" class="arrow"></div>
+            </li>
+        </ol>
     </div>
 
 <!--section about company -->
     <section style="background-color: white;">
         <div class="container">
-            <div class="company">
+            <div class="company" id="company">
                 <div class="company__content">
                     <div class="company__header">
                         <h1>"Elektro" - firma elektryczna</h1>
@@ -89,14 +95,14 @@
                         </div>
                     </div>    
                     <div class="item-image__cable">
-                        <img src="/img/elecpowercable.png" alt="">
+                        <img src="./img/elecpowercable.png" alt="">
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <!-- offer -->
-    <section class="offer-section">
+    <section class="offer-section" id="offer">
         <div class="container">
             <div class="offer">
                 <div class="offer__header">
@@ -105,7 +111,7 @@
                 <div class="offer__items">
                     <div class="box-offer">
                         <div class="box-offer__icon">
-                            <img src="/img/electricity.png" alt="">
+                            <img src="./img/electricity.png" alt="">
                         </div>
                         <div class="box-offer__header">
                             <h1 class="box-offer__title">instalacje</h1>
@@ -118,7 +124,7 @@
                     </div>
                     <div class="box-offer">
                         <div class="box-offer__icon">
-                            <img src="/img/light.png" alt="">
+                            <img src="./img/light.png" alt="">
                         </div>
                         <div class="box-offer__header">
                             <h1 class="box-offer__title">pomiary</h1>
@@ -132,7 +138,7 @@
                     </div>
                     <div class="box-offer">
                         <div class="box-offer__icon">
-                            <img src="/img/electrician.png" alt="">
+                            <img src="./img/electrician.png" alt="">
                         </div>
                         <div class="box-offer__header">
                             <h1 class="box-offer__title">usługi</h1>
@@ -145,37 +151,96 @@
                     </div>
                     <div class="box-offer">
                         <div class="box-offer__icon">
-                            <img src="/img/renewable-energy.png" alt="">
+                            <img src="./img/renewable-energy.png" alt="">
                         </div>
                         <div class="box-offer__header">
                             <h1 class="box-offer__title">fotowoltaika</h1>
                         </div>
                         <div>
                         <ul class="box-offer__list">
-                            <li>montaż instalacji fotowoltaicznych</li>
-                            <li>Lorem ipsum dolor sit amet consectetur.</li>
+                            <li>montaż oraz serwis instalacji fotowoltaicznych</li>
+                            <li>sprzedaż paneli fotowoltaicznych</li>
                             <li>Lorem ipsum dolor sit amet consectetur.</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a></div>
+        <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</<li></div>
 
         <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a></div>
 
         <div>Icons made by <a href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp">Eucalyp</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a></div> -->
-
-        <div class="" style="height:500px; background-color:black; opacity: 0.5; margin-top:100px;">
+    <!-- Gallery -->
+    </section>
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+                <div class="gallery__header">
+                    <h1>Nasze ukończone zlecenia</h1>
+                </div>
+            <div class="gallery">
+                <div class="item">
+                    <a href="./img/masonry/IMG_20191003_095924.jpg" data-lightbox="mygallery" title="Zdjęcie 1">
+                        <img src="./img/masonry/IMG_20191003_095924.jpg" class="" alt="Image 1">
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="./img/masonry/IMG_20191003_124521.jpg" data-lightbox="mygallery" title="Zdjęcie 2">
+                        <img src="./img/masonry/IMG_20191003_124521.jpg" class="" alt="Image 2">
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="./img/masonry/IMG_20191003_150526.jpg" data-lightbox="mygallery" title="Zdjęcie 3">
+                        <img src="./img/masonry/IMG_20191003_150526.jpg" class="" alt="Image 3">
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="http://picsum.photos/602/660/" data-lightbox="mygallery" title="Zdjęcie 4">
+                        <img src="http://picsum.photos/602/660/" class="" alt="Image 4">
+                    </a>
+                </div>
+                <div class="item">
+                    <img src="http://picsum.photos/602/661/" class="" alt="Image 1">
+                </div>
+                <div class="item">
+                    <img src="http://picsum.photos/602/662/" class="" alt="Image 1">
+                </div>
+                <div class="item">
+                    <img src="http://picsum.photos/602/663/" class="" alt="Image 1">
+                </div>
+                <div class="item">
+                    <img src="http://picsum.photos/602/664/" class="" alt="Image 1">
+                </div>
+                <div class="item">
+                    <img src="http://picsum.photos/602/665/" class="" alt="Image 1">
+                </div>
+                <div class="item">
+                    <img src="http://picsum.photos/602/666/" class="" alt="Image 1">
+                </div>
+                <div class="item">
+                    <img src="http://picsum.photos/602/667/" class="" alt="Image 1">
+                </div>
+                <div class="item">
+                    <img src="http://picsum.photos/602/668/" class="" alt="Image 1">
+                </div>
+                <!-- <img class="gallery__item" src="http://picsum.photos/660/646/" alt="">
+                <img class="gallery__item" src="http://picsum.photos/741/375/" alt="">
+                <img class="gallery__item" src="http://picsum.photos/813/455/" alt="">
+                <img class="gallery__item" src="http://picsum.photos/470/896/" alt="">
+                <img class="gallery__item" src="http://picsum.photos/664/653/" alt="">
+                <img class="gallery__item" src="http://picsum.photos/708/313/" alt="">
+                <img class="gallery__item" src="http://picsum.photos/738/578/" alt=""> -->
+            </div>
         </div>
     </section>
+    
     <!-- contact -->
     <section class="contact-section">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2095.4229964468495!2d18.22164411579536!3d52.19393167975372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471b317ddf6156bd%3A0xcac1b4905d35ecc7!2sSzmaragdowa%2C+62-500+Konin!5e1!3m2!1spl!2spl!4v1558518036990!5m2!1spl!2spl"
-            width="100%" height="400" frameborder="0" style="border:0" allowfullscreen>
+            width="100%" height="500" frameborder="0" style="border:0" allowfullscreen>
         </iframe>
         <div class="container">
-            <div class="contact">
+            <div class="contact" id="contact">
                 <div class="contact__details">
                     <div class="contact__box">
                         <h1 class="contact__title">Kontakt</h1>
@@ -221,17 +286,22 @@
             </div>
         </div>
     </section>
+    
 
     <!-- scrollUpButton -->
-    <a id="top" class="scroll-top" href="#">
-        <img src="/img/arrow.png" alt="">
+    <a id="top" class="scroll-top" href="#top">
+        <img src="./img/arrow.png" alt="">
     </a>
     <!-- footer -->
     <footer class="footer">
         Elektro.pl ©2019. All Rights Reserved | Made by &nbsp; 
         <a class="hyperlink" href="#" target="_blank" rel="">Grzegorz Kostrzewa</a>
     </footer>
-    
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./lightbox2-dev/dist/js/lightbox-plus-jquery.min.js"></script>
+    <script src="ism/js/ism-2.2.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

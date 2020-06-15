@@ -8,6 +8,10 @@ body {
   padding: 0;
   font-size: 16px; }
 
+.image {
+  height: 100%;
+  width: 100%; }
+
 a {
   height: 20px;
   color: white;
@@ -30,10 +34,6 @@ ul {
 li {
   font-size: 16px;
   padding: 0px; }
-
-img {
-  width: 100%;
-  height: 100%; }
 
 .text--center {
   text-align: center; }
@@ -80,7 +80,7 @@ img {
   background-color: transparent;
   border: 1px solid white;
   border-radius: 5px;
-  margin-top: 2px; }
+  margin-top: 5px; }
   .hamburger--active .hamburger__inner {
     background-color: transparent; }
   .hamburger--active .hamburger__inner::before {
@@ -118,6 +118,25 @@ img {
   height: 2px;
   background-color: #0099CC; }
 
+.slide-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
+
+.slogan {
+  margin-left: 20%; }
+  .slogan__header {
+    color: #006699;
+    font-size: 36px;
+    margin-top: 50px;
+    line-height: 40px;
+    font-weight: 500; }
+  .slogan__content {
+    color: black;
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 50px; }
+
 #slider, .wrap, .slide-content {
   margin: 0;
   padding: 0;
@@ -134,10 +153,10 @@ img {
   background-repeat: no-repeat; }
 
 .slide1 {
-  background-image: url("/img/image1.jpg"); }
+  background-image: url("./img/image1.jpg"); }
 
 .slide2 {
-  background-image: url("/img/image2.jpg"); }
+  background-image: url("./img/image2.jpg"); }
 
 .slide-content {
   display: flex;
@@ -217,10 +236,19 @@ img {
     font-size: 18px;
     line-height: 1.7; }
 
+.item-image__cable {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; }
+  .item-image__cable img {
+    width: 100%; }
+
 .offer-section {
-  background: url("/img/footer_lodyas.png"), no-repeat;
+  background-image: url("../img/footer_lodyas.png");
+  background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  padding-bottom: 50px; }
 
 .offer {
   max-width: 1200px;
@@ -263,13 +291,50 @@ img {
     font-size: 16px;
     list-style-type: circle; }
 
+.gallery-section {
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/footer_lodyas.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 500px;
+  padding-bottom: 100px; }
+
+.gallery {
+  margin: 100px 15px 0 15px;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: 250px 150px;
+  grid-auto-flow: dense; }
+  .gallery__header {
+    padding-top: 50px;
+    color: white;
+    text-align: right;
+    margin-right: 15px; }
+  .gallery .item {
+    overflow: hidden; }
+    .gallery .item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out; }
+    .gallery .item img:hover {
+      transform: scale(1.05);
+      filter: brightness(0.6); }
+    @media (min-width: 580px) {
+      .gallery .item:first-child {
+        grid-area: 1 / 1 / span 2 / span 2; }
+      .gallery .item:nth-child(3n) {
+        grid-column: span 2; } }
+
 .contact-section {
   background-color: #006699; }
 
 .contact {
   max-width: 1200px;
   color: white;
-  margin: 20px 15px; }
+  margin: 20px 15px 100px 15px; }
   .contact__details {
     display: grid;
     grid-template-columns: repeat(3, 1fr); }
@@ -306,10 +371,14 @@ img {
     transform: scale(1.2); }
 
 @media (max-width: 992px) {
-  .company__header h1 {
-    font-size: 24px; }
-  .company__typography {
-    font-size: 16px; }
+  .company {
+    grid-template-columns: 1fr; }
+    .company__header h1 {
+      font-size: 24px; }
+    .company__typography {
+      font-size: 16px; }
+  .item-image__cable {
+    display: none; }
   .offer__items {
     grid-template-columns: 1fr 1fr; }
   .slide-content__banner h1 {
@@ -322,6 +391,8 @@ img {
     flex-direction: column;
     align-items: center;
     justify-content: center; }
+  .logo-icon {
+    width: 100%; }
   .navigation {
     display: none;
     padding: 20px; }
@@ -351,8 +422,6 @@ img {
     .company__header {
       text-align: center;
       font-size: 26px; }
-  .item-image__cable {
-    display: none; }
   .offer__header {
     text-align: center; }
   .box-offer__header {
@@ -365,11 +434,7 @@ img {
       grid-template-columns: 1fr;
       text-align: center; }
   .footer {
-    font-size: 14px; }
-  .scroll-top {
-    width: 32px;
-    height: 32px;
-    display: none; } }
+    font-size: 14px; } }
 
 @media (max-width: 576px) {
   .offer__items {
